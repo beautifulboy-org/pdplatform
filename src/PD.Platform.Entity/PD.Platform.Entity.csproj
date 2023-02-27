@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Tables\Supplier\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SqlSugarCore" Version="5.0.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PD.Platform.Enum\PD.Platform.Enums.csproj" />
+    <ProjectReference Include="..\PD.Platform.Utils\PD.Platform.Utils.csproj" />
+  </ItemGroup>
+
+</Project>

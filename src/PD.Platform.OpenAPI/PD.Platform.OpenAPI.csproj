@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.2" />
+    <PackageReference Include="SqlSugarCore" Version="5.0.4.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PD.Platform.Facade\PD.Platform.Facade.csproj" />
+    <ProjectReference Include="..\PD.Platform.Utils\PD.Platform.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
