@@ -1,14 +1,19 @@
 
+
 using NLog.Web;
+using PD.Platform.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
-//NLogBuilder.ConfigureNLog("XmlConfig/nlog.config").GetCurrentClassLogger();
-// Add services to the container.
 
+
+builder.Services.Configure<TestConfig>(builder.Configuration.GetSection("TestConfig"));
+
+
+// Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 //×¢ÈëÈÕÖ¾
 //builder.Services.AddLogging(r =>

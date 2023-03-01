@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PD.Platform.OpenAPI</name>
+    </assembly>
+    <members>
+        <member name="T:PD.Platform.OpenAPI.Controllers.Supplier.SupplierController">
+            <summary>
+            供应商控制器
+            </summary>
+        </member>
+        <member name="M:PD.Platform.OpenAPI.Controllers.Supplier.SupplierController.GetList">
+            <summary>
+            供应商列表
+            </summary>  
+            <returns></returns>
+        </member>
+        <member name="M:PD.Platform.OpenAPI.Controllers.Supplier.SupplierController.GetConfig(Microsoft.Extensions.Options.IOptions{PD.Platform.Utils.TestConfig})">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:PD.Platform.OpenAPI.Utils.DbContext.db">
+            <summary>
+            创建数据库对象
+            </summary>
+        </member>
+    </members>
+</doc>
