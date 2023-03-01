@@ -1,13 +1,15 @@
 
 
+using Microsoft.Extensions.Options;
 using NLog.Web;
+using Org.BouncyCastle.Crypto.Prng;
 using PD.Platform.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.Configure<TestConfig>(builder.Configuration.GetSection("TestConfig"));
 
+//SysConfig.getconfig(builder.Configuration.GetSection("TestConfig"));
 
 // Add services to the container.
 builder.Services.AddControllers();

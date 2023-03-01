@@ -31,11 +31,18 @@ namespace PD.Platform.OpenAPI.Controllers.Supplier
         /// </summary>
         /// <returns></returns>
         [HttpGet("config")]
-        public FuncResult<string> GetConfig([FromServices] IOptions<TestConfig> options)
+        public async Task<FuncResult<string>> GetConfig([FromServices] IOptions<TestConfig> options)
         {
             var config = options.Value;
+            var result = string.Empty;
 
-            return $"{config.TestDemo.Name}+ {config.TestDemo.Age}";
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.GetAsync(config.TestDemo.Host);
+                result = await response.Content.ReadAsStringAsync();
+            }
+
+            return $"{config.TestDemo.Name}+ {config.TestDemo.Age}+{result}";
 
         }
     }

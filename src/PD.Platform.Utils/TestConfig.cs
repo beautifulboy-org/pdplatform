@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PD.Platform.Utils
 {
     public class TestConfig
-    { 
+    {
         public DemoTest TestDemo { get; set; }
     }
 
@@ -16,5 +16,13 @@ namespace PD.Platform.Utils
         public string Name { get; set; }
 
         public string Age { get; set; }
+
+        public string Host { get; set; }
+    }
+
+
+    public class ConfigExtensions
+    {
+
     }
 }
